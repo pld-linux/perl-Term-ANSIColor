@@ -11,7 +11,7 @@ Name:		perl-Term-ANSIColor
 Version:	1.08
 Release:	1
 # same as perl
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	660522d9d16c9dc823a768509b53632b
@@ -49,7 +49,6 @@ tak¿e w ECMA-48 i ISO 6429).
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-
 %{__make}
 
 %{?with_tests:%{__make} test}
