@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Term
-%define	pnam	ANSIColor
+%define		pdir	Term
+%define		pnam	ANSIColor
 Summary:	Term::ANSIColor - color screen output using ANSI escape sequences
 Summary(pl):	Term::ANSIColor - kolorowe wy¶wietlanie przy u¿yciu sekwencji ANSI
 Name:		perl-Term-ANSIColor
