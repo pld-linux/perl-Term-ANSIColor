@@ -8,13 +8,13 @@
 Summary:	Term::ANSIColor - color screen output using ANSI escape sequences
 Summary(pl):	Term::ANSIColor - kolorowe wy¶wietlanie przy u¿yciu sekwencji ANSI
 Name:		perl-Term-ANSIColor
-Version:	1.09
+Version:	1.10
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	6b4ca516ad09fbfd2b144a8c80a7ca2d
+# Source0-md5:	e71f4780026cd93c6a01b32ce98b541c
 URL:		http://www.eyrie.org/~eagle/software/ansicolor/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
