@@ -6,7 +6,7 @@
 %define		pdir	Term
 %define		pnam	ANSIColor
 Summary:	Term::ANSIColor - color screen output using ANSI escape sequences
-Summary(pl):	Term::ANSIColor - kolorowe wy¶wietlanie przy u¿yciu sekwencji ANSI
+Summary(pl.UTF-8):   Term::ANSIColor - kolorowe wyÅ›wietlanie przy uÅ¼yciu sekwencji ANSI
 Name:		perl-Term-ANSIColor
 Version:	1.11
 Release:	1
@@ -32,16 +32,16 @@ the provided text. The non-color text style codes from ANSI X3.64
 (bold, dark, underline, and reverse), which were also included in
 ECMA-48 and ISO 6429, are also supported.
 
-%description -l pl
-Ten modu³ Perla to prosty i wygodny interfejs do sekwencji
-terminalowych ANSI s³u¿±cych do ustawiania kolorów (zdefiniowanych w
-EMCA-48, w³±czonych tak¿e do ISO 6429). Sekwencje kolorów s±
-udostêpniane na dwa sposoby - jako sta³e dla ka¿dego koloru oraz jako
-funkcja przyjmuj±ca nazwy kolorów i zwracaj±ca odpowiednie kody
-lub wstawiaj±ca je w podany tekst. Obs³ugiwane s± tak¿e kody stylu
-tekstu nie zwi±zane z kolorami (pogrubienie, pociemnienie,
-podkre¶lenie, negatyw) zgodnie ze standardem ANSI X3.64 (w³±czonym
-tak¿e w ECMA-48 i ISO 6429).
+%description -l pl.UTF-8
+Ten moduÅ‚ Perla to prosty i wygodny interfejs do sekwencji
+terminalowych ANSI sÅ‚uÅ¼Ä…cych do ustawiania kolorÃ³w (zdefiniowanych w
+EMCA-48, wÅ‚Ä…czonych takÅ¼e do ISO 6429). Sekwencje kolorÃ³w sÄ…
+udostÄ™pniane na dwa sposoby - jako staÅ‚e dla kaÅ¼dego koloru oraz jako
+funkcja przyjmujÄ…ca nazwy kolorÃ³w i zwracajÄ…ca odpowiednie kody
+lub wstawiajÄ…ca je w podany tekst. ObsÅ‚ugiwane sÄ… takÅ¼e kody stylu
+tekstu nie zwiÄ…zane z kolorami (pogrubienie, pociemnienie,
+podkreÅ›lenie, negatyw) zgodnie ze standardem ANSI X3.64 (wÅ‚Ä…czonym
+takÅ¼e w ECMA-48 i ISO 6429).
 
 %prep
 %setup -q -n %{pnam}-%{version}
