@@ -6,7 +6,7 @@
 %define		pdir	Term
 %define		pnam	ANSIColor
 Summary:	Term::ANSIColor - color screen output using ANSI escape sequences
-Summary(pl.UTF-8):   Term::ANSIColor - kolorowe wyświetlanie przy użyciu sekwencji ANSI
+Summary(pl.UTF-8):	Term::ANSIColor - kolorowe wyświetlanie przy użyciu sekwencji ANSI
 Name:		perl-Term-ANSIColor
 Version:	1.11
 Release:	1
