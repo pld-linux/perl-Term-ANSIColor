@@ -1,23 +1,25 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Term
 %define		pnam	ANSIColor
 Summary:	Term::ANSIColor - color screen output using ANSI escape sequences
 Summary(pl.UTF-8):	Term::ANSIColor - kolorowe wyświetlanie przy użyciu sekwencji ANSI
 Name:		perl-Term-ANSIColor
-Version:	2.02
-Release:	1
+# NOTE: 5.01 in perl-modules 5.42
+Version:	5.01
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	d9b46a35541ffe7fcbe708e82ef95bf7
-URL:		http://www.eyrie.org/~eagle/software/ansicolor/
+Source0:	https://www.cpan.org/modules/by-module/Term/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	5b097ce054447c649de4a022213349c6
+URL:		https://www.eyrie.org/~eagle/software/ansicolor/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Obsoletes:	perl-ANSIColor
+BuildRequires:	rpmbuild(macros) >= 1.745
+Obsoletes:	perl-ANSIColor < 3.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,11 +45,12 @@ podkreślenie, negatyw) zgodnie ze standardem ANSI X3.64 (włączonym
 także w ECMA-48 i ISO 6429).
 
 %prep
-%setup -q -n %{pnam}-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
+
 %{__make}
 
 %{?with_tests:%{__make} test}
@@ -63,6 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc Changes LICENSE README.md THANKS TODO
 %{perl_vendorlib}/Term/ANSIColor.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Term::ANSIColor.3pm*
